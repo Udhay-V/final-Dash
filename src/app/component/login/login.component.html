@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="login">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>    
+         <h1 style='color:#FAFAFA'>Login</h1> 
+
+        <label><i class='bx bxl-gmail' style='color:#FAFAFA'></i></label>
+        <input type="emailid" placeholder="email-id" formControlName="emailid" ><br><br>
+         <div *ngIf="emailid.invalid && (emailid.dirty || emailid.touched)" class="invalid-feedback">
+        <div class=valid *ngIf="emailid.errors?.['required'] ||emailid.errors.pattern"> Invalid email id. </div>
+        </div> 
+
+        <label><i class='bx bxs-lock' style='color:#FAFAFA'></i></label>
+        <input type="password" placeholder="password" formControlName="password"><br><br>
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="invalid-feedback">
+        <div class=valid *ngIf="password.errors?.['required']">password is required.</div>
+        </div>
+
+        <span>forgot password?</span>
+
+        <button (click)="onSubmit()" >submit</button>
+        
+   </form>
+   <p> Not a member? <a routerLink="/signup" style='color: #FAFAFA'><i>Signup Now</i></a></p>
+</div>
+</body>
+</html>

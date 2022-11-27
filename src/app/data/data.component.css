@@ -1,0 +1,35 @@
+table
+{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-collapse: collapse;
+    width:100%;
+    text-align: center; 
+    position: relative;
+}
+
+table  td, table th
+{
+    border:1px solid rgb(84, 81, 81);
+    padding: 10px;
+}
+
+table tr:nth-child(even)
+{
+    background: #f2f2f2;
+}
+
+table tr:hover {
+    background:#ddd;
+    margin-bottom: 50px;
+}
+
+table th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align:center;
+    background-color:#DA7F72;
+    color: aliceblue;
+}
+table tr{
+    margin: 500px;
+}
